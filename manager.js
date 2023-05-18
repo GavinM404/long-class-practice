@@ -1,8 +1,12 @@
 const Employee = require("./employee.js");
 
 class Manager extends Employee {
-    constructor(employees) { //name, salary, title, manager
-        this.employees = [];
+    constructor(name, salary, title, manager, employees) { //name, salary, title, manager
+        super(name, salary, title, manager)
+        this.employees = []
+    }
+    addEmployee(employee) {
+        this.employees.push(employee)
     }
 }
 
