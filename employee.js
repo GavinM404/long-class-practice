@@ -4,7 +4,13 @@ class Employee {
         this.salary = salary;
         this.title = title;
         this.manager = manager || null;
+        
+        if (this.manager){
+            manager.addEmployee(this)
+        }
     }
+
 }
+
 
 module.exports = Employee
